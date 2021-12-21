@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
     {
         spawn_rate -= Time.deltaTime;
         if (spawn_rate < 0.0f){
-            spawn_rate = 1.0f;
+            spawn_rate = 0.5f;
             GameObject unit_object = (GameObject)Instantiate(unit_prefab, transform.position, transform.rotation);
             UnitMovement movement = unit_object.GetComponent<UnitMovement>();
             movement.set_route(route_reference);
