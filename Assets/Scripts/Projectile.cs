@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -20,6 +18,7 @@ public class Projectile : MonoBehaviour
             Vector3 dir = target.transform.position - transform.position;
             float distance_this_frame = speed * Time.deltaTime;
             if (dir.magnitude <= distance_this_frame){
+                Destroy(target);
                 Destroy(gameObject);
                 return;
             }
