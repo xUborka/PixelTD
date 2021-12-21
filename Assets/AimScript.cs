@@ -5,12 +5,15 @@ using UnityEngine;
 public class AimScript : MonoBehaviour
 {
     public GameObject turret;
+    public GameObject fire_pos;
     public GameObject target;
+    public GameObject projectile;
+    public float fire_rate;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        fire_rate = 0.0f;
     }
 
     // Update is called once per frame
@@ -23,6 +26,16 @@ public class AimScript : MonoBehaviour
 
         float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg;
         turret.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+        fire_rate += Time.deltaTime;
+        if (fire_rate > 1.0f){
+            fire_rate = 0.0f;
+            GameObject projectile_object = (GameObject)Instantiate(projectile, fire_pos.transform.position, fire_pos.transform.rotation);
+            Projectile proj_par = projectile_object.GetComponent<Projectile>();
+            if (proj_par != null){
+                proj_par.target = target;
+            }
+        }
 
         // Vector3 dir = target.transform.position - transform.position;
         // Quaternion look_rotation = Quaternion.LookRotation(dir);

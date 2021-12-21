@@ -3126,6 +3126,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &780220552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2154557888428349338, guid: d5dfaa4fe1416544585d659206fe84b4, type: 3}
+  m_PrefabInstance: {fileID: 2721966929860121392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2721966929860121392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3133,6 +3138,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 515792512164034881, guid: d5dfaa4fe1416544585d659206fe84b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 515792512164034881, guid: d5dfaa4fe1416544585d659206fe84b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2833927896856750219, guid: d5dfaa4fe1416544585d659206fe84b4, type: 3}
       propertyPath: m_Name
       value: GameObject
@@ -3191,15 +3204,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4731378756215774134, guid: d5dfaa4fe1416544585d659206fe84b4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9441753
       objectReference: {fileID: 0}
     - target: {fileID: 4731378756215774134, guid: d5dfaa4fe1416544585d659206fe84b4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.32944348
       objectReference: {fileID: 0}
     - target: {fileID: 4731378756215774134, guid: d5dfaa4fe1416544585d659206fe84b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 38.47
       objectReference: {fileID: 0}
     - target: {fileID: 8670487320158425493, guid: d5dfaa4fe1416544585d659206fe84b4, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -3230,4 +3243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turret: {fileID: 2721966929860121394}
+  fire_pos: {fileID: 780220552}
   target: {fileID: 290623783}
+  projectile: {fileID: 6223433107862327153, guid: a5c22164ec8d93d438c71a0461d1ee0d, type: 3}
+  fire_rate: 0
