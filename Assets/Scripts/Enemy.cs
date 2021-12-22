@@ -1,12 +1,20 @@
 using UnityEngine;
 
-public class UnitMovement : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [SerializeField] private GameObject route_reference;
+    [SerializeField] private int health;
     private int current_target_index;
 
     public void set_route(GameObject route){
         route_reference = route;
+    }
+
+    public void shoot_enemy(int damage){
+        health -= damage;
+        if (health <= 0){
+            Destroy(gameObject);
+        }
     }
 
     // Start is called before the first frame update
